@@ -13,7 +13,10 @@ var result = [];
 var posnum = []
 var sum = 0;
 function arryFun(arry){
-    for (var i = 0; i < arry.length; i++){
+    if (arry.length === 0){
+        console.log("Arry empty");
+    }else {
+        for (var i = 0; i < arry.length; i++){
         if (arry[i] < 0){
             sum += arry[i];   
         }else if (arry[i] > 0){
@@ -24,7 +27,12 @@ function arryFun(arry){
     
     result.push(posnum.length,sum);
     return result;
+
+    }
+
 }
+
+arryFun([1,-8,-1])
 
 arryFun([1,2,-1,-5,-10,5])
 Output: [10, -65].
